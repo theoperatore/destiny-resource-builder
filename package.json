@@ -1,5 +1,5 @@
 {
-  "name": "destiny-api-fluent",
+  "name": "destiny-resource-builder",
   "version": "1.0.0",
   "description": "Get stuff out of the destiny api easier via chainable functions",
   "main": "lib/index.js",
