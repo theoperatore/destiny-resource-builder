@@ -42,11 +42,12 @@ function getCharacterStats(playerName) {
 And instead decided that I'll build up my entire querying response into a single object, then slice n' dice any way I please:
 
 ```javascript
+const PSN_SEARCH_NAME = 'abersoto';
 const PSN_ACCOUNT_TYPE = 2;
-const createDestinyResource = require('dsetiny-resource');
+const createDestinyResource = require('./lib');
 
 createDestinyResource(process.env.DESTINY_API_KEY)
-  .loadPlayer('abersoto', PSN_ACCOUNT_TYPE)
+  .loadPlayer(PSN_SEARCH_NAME, PSN_ACCOUNT_TYPE)
   .getMembershipId()
   .getCharacterIds()
   .getCharacterStats()
