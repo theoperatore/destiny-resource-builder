@@ -1,0 +1,24 @@
+{
+  "name": "destiny-api-fluent",
+  "version": "1.0.0",
+  "description": "Get stuff out of the destiny api easier via chainable functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/*.test.js | tap-spec"
+  },
+  "author": "Alex Petersen <theoperatore@gmail.com> (http://anpetersen.me)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.5.0",
+    "npm": ">=3.10.3"
+  },
+  "dependencies": {
+    "es6-promise": "^3.2.1",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "localenv": "^0.2.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
+  }
+}
