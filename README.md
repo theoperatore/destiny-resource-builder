@@ -51,14 +51,11 @@ createDestinyResource(process.env.DESTINY_API_KEY)
   .getMembershipId()
   .getCharacterIds()
   .getCharacterStats()
-  .getCharacterActivities()
   .getResource(resource => {
     console.log(resource.membershipId);              // player membershipId
     console.log(resource.characterIds);              // array of strings
     console.log(resource.characterStats);            // a huge object of characterStats
     console.log(resource.characterStatsDefinitions); // definitions for characterStats hashes
-    console.log(resource.characterActivities);            // a huge object of characterActivities
-    console.log(resource.characterActivitiesDefinitions); // definitions for characterActivities hashes
 
     // ... do cool stuff with the all of the data ...
   })
