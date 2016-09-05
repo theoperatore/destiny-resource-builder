@@ -2,7 +2,7 @@
   "name": "destiny-api-fluent",
   "version": "1.0.0",
   "description": "Get stuff out of the destiny api easier via chainable functions",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "tape tests/*.test.js | tap-spec"
   },
