@@ -7,13 +7,14 @@ const createDestinyResource = require('../lib');
 const PSN_TYPE = 2;
 
 test('can build output object with character properties', t => {
-  t.plan(7);
+  t.plan(8);
 
   createDestinyResource(process.env.DESTINY_API_KEY)
     .loadPlayer('abersoto', PSN_TYPE)
     .getMembershipId()
     .getCharacterIds()
     .getCharacterStats('warlock')
+    .getHistoricalStats('warlock')
     .getResource(output => {
 
       const defs = output.characterStats.map(c => c.definitions);
@@ -26,6 +27,7 @@ test('can build output object with character properties', t => {
       t.equal(defs.length, 1, 'found correct number of definitions');
       t.equal(filtered.length, 1, 'found all definitions as defined');
       t.equal(output.characterStats[0].character.characterBase.classHash, 2271682572, 'got correct filtered class type');
+      t.equal(output.historicalStats.length, 1, 'got correct number of historical stats');
     })
     .catch(t.end);
 });
